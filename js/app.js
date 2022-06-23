@@ -1,8 +1,10 @@
-// 
+// declaracion de variables
 const criptomonedasSelect = document.querySelector('#criptomonedas');
 const monedaSelect = document.querySelector('#moneda');
 const formulario = document.querySelector('#formulario');
 const resultado = document.querySelector('#resultado');
+
+
 
 const objBusqueda = {
     moneda: '',
@@ -23,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     monedaSelect.addEventListener('change', leerValor);
 });
 
-// Consulta la API par aobtener un listado de Criptomonedas
+// Consulta la API par obtener un listado de Criptomonedas
 function consultarCriptomonedas() {
 
     // Ir  AtoPLISTS Y Despues market capp 
@@ -35,6 +37,7 @@ function consultarCriptomonedas() {
         .then( criptomonedas  =>  selectCriptomonedas(criptomonedas) )
         .catch( error => console.log(error));
 }
+
 // llena el select 
 function selectCriptomonedas(criptomonedas) {
     criptomonedas.forEach( cripto => {
