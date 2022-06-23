@@ -17,6 +17,7 @@ const obtenerCriptomonedas = criptomonedas => new Promise( resolve => {
 });
 
 
+
 document.addEventListener('DOMContentLoaded', () => {
     consultarCriptomonedas();
 
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     criptomonedasSelect.addEventListener('change', leerValor);
     monedaSelect.addEventListener('change', leerValor);
 });
+
 
 // Consulta la API par obtener un listado de Criptomonedas
 function consultarCriptomonedas() {
@@ -71,7 +73,7 @@ function submitFormulario(e) {
 
 
 function mostrarAlerta(mensaje) {
-        // Crea el div
+        // Creo el elemento div y agrego clase error
         const divMensaje = document.createElement('div');
         divMensaje.classList.add('error');
         
